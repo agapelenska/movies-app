@@ -1,0 +1,8 @@
+<section *ngIf="movies$ | async">
+    <span>Liczba filmów: {{ (movies$ | async).length }}</span>
+
+    <h1>Tytuły:</h1>
+    <p *ngFor="let movie of movies$ | async">
+        {{movie.id}}. {{movie.title}}
+    </p>
+</section>
